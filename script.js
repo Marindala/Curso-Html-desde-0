@@ -1,6 +1,36 @@
-const boton = document.querySelector("#boton-importante")
+
+// otras formas de añadir eventos click a elementos
+// recupera solo el primer boton que encuentre
+// const boton = document.querySelector('.button-apply-job')
+// console.log(boton) // null si no lo encuentra
+
+// if (boton !== null) {
+//   boton.addEventListener('click', function() {
+//     boton.textContent = '¡Aplicado!'
+//     boton.classList.add('is-applied')
+//     boton.disabled = true
+//   })
+// }
+
+
+/* const boton = document.querySelector("#boton-importante")
+//devuelve el primer elemento
 
   boton.addEventListener("click", function responseClick(){
-    boton.textContent = '¡Aplicado!'
+    boton.textContent = '¡Aplicado!' //textContent propiedades que tiene  el elemento
+    boton.style.backgroundColor = '#4caf50' //otra propiedad
+    boton.disabled = true //desactivado otra propiedad
     
-  })
+  }) */
+
+ const botones = document.querySelectorAll('.button-apply-job')
+// devuelve un NodeList (array-like) con todos los botones que encuentre
+// o una lista vacia [] si no encuentra ninguno
+
+ botones.forEach(boton => {
+   boton.addEventListener('click', function() {
+     boton.textContent = '¡Aplicado!'
+     boton.classList.add('is-applied')
+     boton.disabled = true
+   })
+ })
