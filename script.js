@@ -23,14 +23,29 @@
     
   }) */
 
- const botones = document.querySelectorAll('.button-apply-job')
+ //const botones = document.querySelectorAll('.button-apply-job')
 // devuelve un NodeList (array-like) con todos los botones que encuentre
 // o una lista vacia [] si no encuentra ninguno
 
- botones.forEach(boton => {
+/*  botones.forEach(boton => {
    boton.addEventListener('click', function() {
      boton.textContent = '¡Aplicado!'
      boton.classList.add('is-applied')
      boton.disabled = true
    })
- })
+ }) */
+
+ 
+//busco dentro de la section el evento click event delegation (burbujea)
+
+ const jobsListingSection = document.querySelector('.jobs-listings')
+
+jobsListingSection.addEventListener('click', function(event) {
+  const element = event.target
+
+  if (element.classList.contains('button-apply-job')) {
+    element.textContent = '¡Aplicado!'
+    element.classList.add('is-applied')
+    element.disabled = true
+  }
+})
