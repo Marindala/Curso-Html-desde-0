@@ -49,3 +49,9 @@ jobsListingSection?.addEventListener('click', function(event) {
     element.disabled = true
   }
 })
+
+const filterTechnology = document.getElementById('filter-technology')
+
+filterTechnology.addEventListener('change', function () {
+  console.log('Tecnología seleccionada:', filterTechnology.value)
+})
