@@ -38,45 +38,45 @@
  
 //busco dentro de la section el evento click event delegation (burbujea)
 
- const jobsListingSection = document.querySelector('.jobs-listings')
+ //const jobsListingSection = document.querySelector('.jobs-listings')
 
-jobsListingSection?.addEventListener('click', function(event) {
-  const element = event.target
+//jobsListingSection?.addEventListener('click', function(event) {
+  //const element = event.target
 //si el elemento de la lista contiene la clase "button-apply-job"
-  if (element.classList.contains('button-apply-job')) {
-    element.textContent = '¡Aplicado!'
-    element.classList.add('is-applied')
-    element.disabled = true
-  }
-})
+  //if (element.classList.contains('button-apply-job')) {
+    //element.textContent = '¡Aplicado!'
+    //element.classList.add('is-applied')
+    //element.disabled = true
+  //}
+//})
 
-const filterTechnology = document.getElementById('filter-technology')
+//const filterTechnology = document.getElementById('filter-technology')
 
-filterTechnology.addEventListener('change', function () {
-  console.log('Tecnología seleccionada:', filterTechnology.value)
-})
+//filterTechnology.addEventListener('change', function () {
+  //console.log('Tecnología seleccionada:', filterTechnology.value)
+//})
 
-const filter = document.querySelector('#filter-location')
-const mensaje = document.querySelector('#filter-selected-value')
+//const filter = document.querySelector('#filter-location')
+//const mensaje = document.querySelector('#filter-selected-value')
 
-filter.addEventListener('change', function () {
-  const jobs = document.querySelectorAll('.job-listing-card')
+//filter.addEventListener('change', function () {
+  //const jobs = document.querySelectorAll('.job-listing-card')
 
-  const selectedValue = filter.value
+  //const selectedValue = filter.value
 
-  if (selectedValue) {
-    mensaje.textContent = `Has seleccionado: ${selectedValue}`
-  } else {
-    mensaje.textContent = ''
-  }
+  //if (selectedValue) {
+    //mensaje.textContent = `Has seleccionado: ${selectedValue}`
+  //} else {
+    //mensaje.textContent = ''
+  //}
 
-  jobs.forEach(job => {
+  //jobs.forEach(job => {
     // const modalidad = job.dataset.modalidad
-    const modalidad = job.getAttribute('data-modalidad')
-    const isShown = selectedValue === '' || selectedValue === modalidad
-    job.classList.toggle('is-hidden', isShown === false)
-  })
-})
+    //const modalidad = job.getAttribute('data-modalidad')
+    //const isShown = selectedValue === '' || selectedValue === modalidad
+    //job.classList.toggle('is-hidden', isShown === false)
+  //})
+//})
 
 
 console.log("Antes del Fetch");
