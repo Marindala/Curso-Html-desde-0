@@ -77,3 +77,15 @@ filter.addEventListener('change', function () {
     job.classList.toggle('is-hidden', isShown === false)
   })
 })
+
+
+console.log("Antes del Fetch");
+fetch("./data.json") /* fetch es asíncrono */
+  .then((response) => { //promesas
+    return response.json();
+  })
+  .then((jobs) => {
+      console.log ("Tengo los resultados del fetch")
+      console.log (jobs)
+    })
+    console.log("despues del fetch")
