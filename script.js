@@ -79,25 +79,25 @@
 //})
 
 
-console.log("Antes del Fetch");
-fetch("./data.json") /* fetch es asíncrono */
-  .then((response) => { //promesas
-    return response.json();
+//console.log("Antes del Fetch");
+//fetch("./data.json") /* fetch es asíncrono */
+  //.then((response) => { //promesas
+  /*   return response.json();
   })
   .then((jobs) => {
       console.log ("Tengo los resultados del fetch")
       console.log (jobs)
     })
-    console.log("despues del fetch")
+    console.log("despues del fetch") */
 
 ///////////////////////////////////////////////////////
 
-const container = document.querySelector('.jobs-listings')
+//const container = document.querySelector('.jobs-listings')
 
 
 
-fetch("./data.json") /* fetch es asíncrono */
-  .then((response) => {
+//fetch("./data.json") /* fetch es asíncrono */
+ /*  .then((response) => {
     return response.json();
   })
   .then((jobs) => {
@@ -118,4 +118,4 @@ fetch("./data.json") /* fetch es asíncrono */
 
       container.appendChild(article)
     })
-  });
+  }); */
