@@ -6,7 +6,7 @@ class DevJobsAvatar extends HTMLElement { //hereda de los elementos HTML
   }
 
   createUrl(service, username) {
-    return `https://unavatar.io/${service}/${username}`
+    return `https://unavatar.io/${service}/${username}` //aqui toma el avatar
   }
 
   render() {
